@@ -1,6 +1,6 @@
 FROM node:14
 
-ENV MONGODB_URI=value
+ENV MONGODB_URI=mongodb+srv://username:username@demo-db.mvxco7y.mongodb.net/
 
 RUN mkdir -p /home/app
 
@@ -16,3 +16,4 @@ EXPOSE 3000
 
 # no need for /home/app/server.js because of WORKDIR
 CMD ["node", "server.js"]
+
