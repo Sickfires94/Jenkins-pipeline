@@ -1,10 +1,8 @@
-1. Install gcloud
-2. Login into glcoud
+docker build . -t obaidr/todo-app
 
-   `gcloud auth application-default login` &
-   `gcloud auth login`
+docker run -e MONGODB_URI=mongodb+srv://obaid:iba123@cluster0.vhstvh5.mongodb.net/main -p 3000:3000 obaidr/todo-app
 
-3.
+https://cloud.google.com/kubernetes-engine/docs/how-to/cluster-access-for-kubectl
 
 gcloud components install gke-gcloud-auth-plugin
 
