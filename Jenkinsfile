@@ -2,7 +2,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'todo-app:latest'
         KUBECONFIG = '/home/jenkins/.kube/config'
-        REGISTRY = 'localhost:5000'
+        REGISTRY = 'sickfires/jenkins-pipeline'
     }
     agent any
     stages {
@@ -12,7 +12,7 @@ pipeline {
     environment {
         DOCKER_IMAGE = 'todo-app:latest'
         KUBECONFIG = '/home/jenkins/.kube/config'
-        REGISTRY = 'localhost:5000'
+        REGISTRY = 'sickfires/jenkins-pipeline'
     }
     agent any
     stages {
