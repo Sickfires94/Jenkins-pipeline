@@ -1,0 +1,463 @@
+{
+	"info": {
+		"_postman_id": "0504c403-d661-4129-a452-9bc149875649",
+		"name": "Api Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31406343"
+	},
+	"item": [
+		{
+			"name": "Authorization",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"abc@xyz.com\",\r\n\"password\" : \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup (Wrong email)",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"abc@xyz.com\",\r\n\"password\" : \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signup (Wrong password)",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\"email\":\"abc@xyz.com\",\r\n\"password\" : \"abc123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/auth/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"abc@xyz.com\",\r\n    \"password\":\"abc123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Create",
+			"item": [
+				{
+					"name": "AddTask",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\",\r\n    \"description\": \"create 2 APIs for each crud\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/addtask",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"addtask"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Read",
+			"item": [
+				{
+					"name": "GetByTitle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/getbytitle",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"getbytitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/getbytitle",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"getbytitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTitle With Wrong Token",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/getbytitle",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"getbytitle"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByTitleWithUser",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/getbytitle",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"getbytitle"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Update",
+			"item": [
+				{
+					"name": "UpdateDescription",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\",\r\n    \"description\": \"Halfway there if this is successfully updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/updatedescription",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"updatedescription"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "DeleteByTitle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\",\r\n    \"description\": \"Halfway there if this is successfully updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/updatedescription",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"updatedescription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteAll",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0B4eXouY29tIiwiY3JlYXRlZEF0IjoiMjAyNC0wMi0xOFQwOTo1NjoyOS45NDNaIiwiYWRtaW4iOmZhbHNlLCJpYXQiOjE3MDgyNTAxODksImV4cCI6MTcwODMzNjU4OX0.TDlv63nqWkC0S405y1a_g203WxV0wxKcrXYael2NqwY",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"abc@xyz.com\",\r\n    \"title\": \"create API\",\r\n    \"description\": \"Halfway there if this is successfully updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:5600/tasks/updatedescription",
+							"host": [
+								"localhost"
+							],
+							"port": "5600",
+							"path": [
+								"tasks",
+								"updatedescription"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
